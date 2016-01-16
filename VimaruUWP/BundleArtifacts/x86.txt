@@ -1,0 +1,2 @@
+MainPackage=D:\Projects\Projects\Vimaru\VimaruUWP\bin\x86\Release\VimaruUWP_1.1.2.0_x86.appx
+SymbolPackage=D:\Projects\Projects\Vimaru\VimaruUWP\AppPackages\VimaruUWP_1.1.2.0_Test\VimaruUWP_1.1.2.0_x86.appxsym

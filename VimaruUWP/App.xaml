@@ -1,0 +1,19 @@
+﻿<Application
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:VimaruUWP"
+    xmlns:SampleData="using:Blend.SampleData.MainPageSampleDataSource" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+    x:Class="VimaruUWP.App"
+    xmlns:converters="using:_9padv4.Converters"
+    RequestedTheme="Light">
+
+    <Application.Resources>
+        <SampleData:MainPageSampleDataSource x:Key="MainPageSampleDataSource" d:IsDataSource="True"/>
+        <Style TargetType="ListViewItem" x:Name="StyleListViewItemContainer">
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        </Style>
+        <converters:LoadStateToVisibility x:Key="LoadStateToVisibility" />
+        <converters:MarkToForeground x:Key="MarkToForeground" />
+    </Application.Resources>
+
+</Application>
