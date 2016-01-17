@@ -58,10 +58,11 @@ namespace VimaruUWP.ViewModels
             }
             TraDiemLoadState = LoadState.Loading;
             DSNamHoc.Clear();
-            var content = new HttpMultipartFormDataContent();
-            content.Add(new HttpStringContent(MaSV), "masv");
-            content.Add(new HttpStringContent("tra_diem_truc_tuyen_form"), "form_id");
-            content.Add(new HttpStringContent(form_build_id), "form_build_id");
+            var content = new HttpFormUrlEncodedContent(new Dictionary<string, string> {
+                {"masv",MaSV },
+                {"form_id","tra_diem_truc_tuyen_form" },
+                {"form_build_id",form_build_id },
+            });
             var data = await Utils.UploadString("http://khaothi.vimaru.edu.vn/system/ajax", null, content);
             var obj = JArray.Parse(data);
             var html = obj[1]["data"].ToString();
